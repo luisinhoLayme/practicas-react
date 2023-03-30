@@ -1,0 +1,22 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.testi-box {
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;
+  padding: 0 1.5rem;
+
+  &__slider {
+    box-shadow: v.$outer-shadow;
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+
+  &__contains {
+    display: flex;
+    transition: margin 1s ease;
+    align-items: center;
+    width: 100%;
+  }
+}

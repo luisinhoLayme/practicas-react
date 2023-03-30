@@ -1,0 +1,17 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.logo {
+  &__enlace {
+    @include m.logo-burger;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: c.$skin-color;
+    line-height: 4rem;
+    border: .2rem solid c.$skin-color;
+  }
+}

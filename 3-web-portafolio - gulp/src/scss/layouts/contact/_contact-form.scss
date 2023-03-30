@@ -1,0 +1,15 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.contact-form {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-top: 5rem;
+}
+
+.submit-btn {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: right;
+  padding: 0 1.5rem;
+}

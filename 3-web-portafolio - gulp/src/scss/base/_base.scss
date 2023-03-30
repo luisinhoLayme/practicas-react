@@ -1,0 +1,84 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*:not(i) {
+  font-family: v.$font-primary;
+  font-weight: 400;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-color: v.$bg-black-50;
+
+  &.hidden-scrolling {
+    overflow-y: hidden;
+  }
+}
+
+[class$="container"],
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+[class*="row"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class$="link"] {
+  @include m.button(transparent, c.$skin-color);
+  box-shadow: v.$outer-shadow;
+  @include m.hover-in-shadow;
+}
+
+.section {
+  &.hide {
+    display: none;
+  }
+}
+
+.fade-out-effect {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: v.$bg-black-50;
+  z-index: -1;
+  visibility: hidden;
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  &--active {
+    visibility: visible;
+    z-index: 1000;
+    animation: fadeOut .3s ease-out;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+ul {
+  padding:0;
+  list-style: none;
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.about-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0 1.5rem;
+
+  &__box {
+    box-shadow: v.$inner-shadow;
+    border-radius: .5rem;
+    padding: 1.5rem;
+  }
+  &__image {
+    box-shadow: v.$outer-shadow;
+    border: 1rem solid transparent;
+    width: 100%;
+  }
+}

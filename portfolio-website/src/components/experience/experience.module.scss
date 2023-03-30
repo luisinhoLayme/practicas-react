@@ -1,0 +1,64 @@
+@use '../../scss/variables' as v;
+@use '../../scss/mixins' as m;
+
+.container {
+  @include m.grid(2, 3.2rem);
+
+  @include m.laptop {
+    grid-template-columns: 1fr;
+  }
+
+  @include m.small {
+    gap: 1.6rem;
+  }
+
+  & > div {
+    background-color: v.$color-bg-variant;
+    padding: 3.8rem 8rem;
+    border-radius: 3.2rem;
+    border: 1px solid transparent;
+    cursor: default;
+    transition: background-color .3s ease,
+                barder .4s ease;
+
+    @include m.laptop {
+      width: 80%;
+      padding: 3.2rem;
+      margin: 0 auto;
+    }
+
+    @include m.small {
+      width: 100%;
+      padding: 3.2rem 1.6rem;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid v.$color-primary-variant;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 3.2rem;
+      color: v.$color-primary;
+    }
+  }
+}
+
+.content {
+  @include m.grid(2, 3.2rem);
+
+  @include m.laptop {
+    padding: 1.6rem;
+  }
+}
+
+.details {
+  display: flex;
+  gap: 1.6rem;
+
+  .icon {
+    margin-top: .6rem;
+    color: v.$color-primary;
+  }
+}

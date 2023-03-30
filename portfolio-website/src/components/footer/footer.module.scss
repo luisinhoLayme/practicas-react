@@ -1,0 +1,66 @@
+@use '../../scss/variables' as v;
+@use '../../scss/mixins' as m;
+
+footer {
+  background-color: v.$color-primary;
+  padding: 4.8rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 11.2rem;
+
+  a {
+    color: v.$color-bg;
+  }
+
+  .logo {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+    display: inline-block;
+  }
+
+  .permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.2rem;
+    margin: 0 auto 4.8rem;
+
+    @include m.small {
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-bottom: 6.4rem;
+
+    @include m.small {
+      margin-bottom: 3.2rem;
+    }
+
+    a {
+      background-color: v.$color-bg;
+      color: v.$color-white;
+      padding: 1.4rem;
+      border-radius: 1.3rem;
+      display: flex;
+      border: 1px solid transparent;
+      transition: all .3s ease;
+
+      &:hover {
+        background-color: transparent;
+        color: v.$color-bg;
+        border-color: v.$color-bg;
+      }
+    }
+  }
+
+  .copyright {
+    margin-bottom: 6.4rem;
+    color: v.$color-bg;
+  }
+}

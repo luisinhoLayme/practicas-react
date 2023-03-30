@@ -1,0 +1,103 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.effects-wrap {
+  &__effect {
+    position: absolute;
+    z-index: -1;
+
+    &--1 {
+      width: 3rem;
+      height: 3rem;
+      border: .4rem solid #8a40ff;
+      right: 10%;
+      bottom: 10%;
+      animation: spin 10s linear infinite;
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    &--2 {
+      left: 3%;
+      bottom: 20%;
+      width: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: topBounce 3s ease-in-out infinite;
+
+      @keyframes topBounce {
+        0%,100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(2.5rem);
+        }
+      }
+    }
+    &--3 {
+      height: 18rem;
+      width: 18rem;
+      border: 2.5rem solid c.$skin-color;
+      border-radius: 50%;
+      left: 50%;
+      top: -12rem;
+      animation: leftBounce 3s ease-in-out infinite;
+
+      @keyframes leftBounce {
+        0%,100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(2.5rem);
+        }
+      }
+    }
+    &--4 {
+      border-top: 3rem solid transparent;
+      border-left: 3rem solid #06d79c;
+      left: 30%;
+      top: 20%;
+      animation: spin 15s linear infinite;
+
+      &:before {
+        content: '';
+        border-top: 3rem solid transparent;
+        border-left: 3rem solid #06d79c;
+        position: absolute;
+        opacity: .5;
+        left: -3.5rem;
+        top: -2.5rem;
+      }
+    }
+    &--5 {
+      height: 5rem;
+      width: 5rem;
+      right: 10%;
+      top: 30%;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 50%;
+      overflow: hidden;
+      animation: spin 10s linear infinite;
+    }
+  }
+
+  &__points {
+    height: .3rem;
+    width: .3rem;
+    background-color: #ff9c07;
+    margin: 0 .3rem .8rem;
+  }
+  &__line {
+    width: .1rem;
+    background-color:   #4dd0e1;
+  }
+}

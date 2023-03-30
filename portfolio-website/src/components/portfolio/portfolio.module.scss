@@ -1,0 +1,47 @@
+@use '../../scss/variables' as v;
+@use '../../scss/mixins' as m;
+
+.portfolio {
+  @include m.grid(3, 4rem);
+
+  @include m.laptop {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.9rem;
+  }
+
+  @include m.small {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  &_item {
+    background-color: v.$color-bg-variant;
+    padding: 2rem;
+    border-radius: 3.2rem;
+    border: 1px solid transparent;
+    transition: all .3s ease;
+
+    &:hover {
+      border-color: v.$color-primary-variant;
+      background-color: transparent;
+    }
+
+    h3 {
+      margin: 1.9rem 0 3.2rem;
+    }
+  }
+
+  &_img {
+    border-radius: 2.4rem;
+    overflow: hidden;
+  }
+
+  &_btn {
+    @include m.btn(transparent, v.$color-primary);
+  }
+
+  &_btnPrimary {
+    @include m.btn(v.$color-primary, v.$color-bg);
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,42 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.hamburger-btn {
+  @include m.logo-burger;
+  box-shadow: v.$outer-shadow;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow .3s ease;
+  @include m.hover-in-shadow;
+
+  &:after {
+    border-radius: 50%;
+  }
+
+  &__span {
+    display: block;
+    height: .2rem;
+    width: 1.6rem;
+    background-color: v.$bg-black-900;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: v.$bg-black-900;
+    }
+    &:before {
+      top: -.6rem;
+    }
+    &:after {
+      top: .6rem;
+    }
+  }
+}

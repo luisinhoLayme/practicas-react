@@ -1,0 +1,8 @@
+.menu__close &times;
+nav.navigation
+  each page, index in pages
+    if index===0
+      a(href=`#${page}`).link-item.navigation__link.navigation__link--active= page
+    else 
+      a(href=`#${page}`).link-item.navigation__link= page
+p.menu__copyright &copy; 2022 The WebLuisinho

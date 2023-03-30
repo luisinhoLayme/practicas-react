@@ -1,0 +1,110 @@
+.about-section__container
+  .about-section__row
+    .about-section__title
+      h2(data-heading="main info").about-section__heading About me
+  .about-section__row
+    .about-img
+      .about-img__box
+        img(src="images/profile-pic.png", alt="profile-pic").about-img__image
+      //- social link start
+      .about-social
+        each social in redSocials
+          a(href="#").about-social__link
+            i(class=`fab fa-${social}`)
+      //- social link end
+    .about-info
+      p.about-info__paragraph
+        span.about-info__paragraph--span Hi! My name is Luisinho. I am a Web Developer.
+        Amet explicabo praesentium neque quae sed. Culpa dolorem explicabo id modi alias. Exercitationem sint corporis repellat alias hic. Veniam quos tempore quis necessitatibus autem, voluptas! Libero molestiae molestiae quod necessitatibus
+        Amet explicabo praesentium neque quae sed. Culpadolorem explicabo id modi alias.
+      p.about-info__paragraph Exercitationem sint corporis repellat alias hic. Veniam quos tempore quis necessitatibus autem, voluptas! Libero molestiae molestiae quod necessitatibus
+      a(href="cv.pdf").about-info__link Download CV
+      a(href="#contact").about-info__link Hire Me
+  //- about tabs start
+  .about-section__row
+    .about-tabs
+      span(data-target=".skills").about-tabs__item.about-tabs__item--active skills
+      span(data-target=".experience").about-tabs__item experience
+      span(data-target=".education").about-tabs__item education
+  //- about tabs end
+  //- skills start
+  .about-section__row
+    .skills.tab-content.tab-content--active
+      .skills__row
+        -let count = 5
+        each lenguaje in lenguajes 
+          //- skills item start
+          .skill-item
+            p.skill-item__paragraph= lenguaje
+            .skill-item__progress
+              .skill-item__progress-bar(style=`width: calc(${10 * count}% - 14px)`)
+                span.skill-item__span= 10 * count++ + '%'
+          //- skills item end
+  //- skills end
+  //- experience start
+  .about-section__row
+    .experience.tab-content
+      .experience__row
+        .timeline
+          .timeline__row
+            //- timeline item start
+            .timeline-item
+              .timeline-item__inner
+                i.fas.fa-briefcase.timeline-item__icon
+                span.timeline-item__span Sep, 2022 - Present
+                h3.timeline-item__h3 full stack developer
+                h4.timeline-item__h4 company name, Cotes
+                p.timeline-item__paragraph Consectetur perspiciatis vel voluptates quaerat incidunt maxime itaque? Expedita quidem dolores quia iste nisi Laboriosam
+            //- timeline item end
+            //- timeline item start
+            .timeline-item
+              .timeline-item__inner
+                i.fas.fa-briefcase.timeline-item__icon
+                span.timeline-item__span Sep, 2022 - Present
+                h3.timeline-item__h3 Web designer
+                h4.timeline-item__h4 company name, Cotes
+                p.timeline-item__paragraph Consectetur perspiciatis vel voluptates quaerat incidunt maxime itaque? Expedita quidem dolores quia iste nisi Laboriosam
+            //- timeline item end
+            //- timeline item start
+            .timeline-item
+              .timeline-item__inner
+                i.fas.fa-briefcase.timeline-item__icon
+                span.timeline-item__span Sep, 2022 - Present
+                h3.timeline-item__h3 web designer
+                h4.timeline-item__h4 company name, Cotes
+                p.timeline-item__paragraph Consectetur perspiciatis vel voluptates quaerat incidunt maxime itaque? Expedita quidem dolores quia iste nisi Laboriosam
+            //- timeline item end
+  //- experience end
+  //- education start
+  .about-section__row
+    .education.tab-content
+      .education__row
+        .timeline
+          .timeline__row
+            //- timeline item start
+            .timeline-item
+              .timeline-item__inner
+                i.fas.fa-graduation-cap.timeline-item__icon
+                span.timeline-item__span Sep, 2022 - Present
+                h3.timeline-item__h3 master in computer science
+                p.timeline-item__paragraph Consectetur perspiciatis vel voluptates quaerat incidunt maxime itaque? Expedita quidem dolores quia iste nisi Laboriosam
+            //- timeline item end
+            //- timeline item start
+            .timeline-item
+              .timeline-item__inner
+                i.fas.fa-graduation-cap.timeline-item__icon
+                span.timeline-item__span Sep, 2022 - Present
+                h3.timeline-item__h3 master in computer science
+                p.timeline-item__paragraph Consectetur perspiciatis vel voluptates quaerat incidunt maxime itaque? Expedita quidem dolores quia iste nisi Laboriosam
+            //- timeline item end
+            //- timeline item start
+            .timeline-item
+              .timeline-item__inner
+                i.fas.fa-graduation-cap.timeline-item__icon
+                span.timeline-item__span 2008 - 2010
+                h3.timeline-item__h3 master in computer science
+                p.timeline-item__paragraph Consectetur perspiciatis vel voluptates quaerat incidunt maxime itaque? Expedita quidem dolores quia iste nisi Laboriosam
+            //- timeline item end
+  //- education end
+
+

@@ -1,0 +1,11 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.portfolio-section {
+  padding: 8rem 0 8rem;
+  min-height: 100vh;
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+}

@@ -1,0 +1,106 @@
+@use '../../scss/variables' as v;
+@use '../../scss/mixins' as m;
+
+.container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+
+  @include m.laptop {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 3.2rem;
+    background-image: linear-gradient(45deg, transparent, v.$color-primary, transparent);
+    display: grid;
+    place-items: center;
+
+    @include m.laptop {
+      width: 50%;
+      margin: 3.2rem auto 6.4rem;
+    }
+
+    @include m.small {
+      width: 65%;
+      margin: 0 auto 4.8rem;
+    }
+  }
+
+  .image {
+    border-radius: 3.2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: transform .3s ease;
+
+    &:hover {
+      transform: rotate(0);
+    }
+  }
+
+  .content {
+    @include m.small {
+      text-align: center;
+    }
+  }
+
+  .cards {
+    @include m.grid(3, 2.4rem);
+
+    @include m.small {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.6rem;
+    }
+  }
+
+  .card {
+    background-color: v.$color-bg-variant;
+    border: 1px solid transparent;
+    border-radius: 1.6rem;
+    box-shadow: 0px 0px 1rem darken(v.$color-primary, 40%);
+    padding: 3.2rem;
+    text-align: center;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: transparent;
+      border-color: v.$color-primary-variant;
+    }
+  }
+
+  .card_icon {
+    color: v.$color-primary;
+    font-size: 2.3rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .card_title {
+    font-size: 1.5rem;
+  }
+
+  .card_des {
+    font-size: 1.4rem;
+    color: v.$color-light;
+  }
+
+  .paragraph {
+    margin: 3.2rem 0 3.3rem;
+    color: v.$color-light;
+
+    @include m.laptop {
+      margin: 1.6rem 0 2.4rem;
+    }
+
+    @include m.small {
+      margin: 2.4rem 0;
+    }
+  }
+
+  .btn {
+    @include m.btn(v.$color-primary, v.$color-bg);
+  }
+}
+

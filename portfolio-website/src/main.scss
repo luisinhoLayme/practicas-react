@@ -1,0 +1,104 @@
+@use 'scss/variables' as v;
+@use 'scss/mixins' as m;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: v.$font-primary;
+  font-size: 1.6rem;
+  background-color: v.$color-bg;
+  color: v.$color-white;
+  line-height: 1.7;
+  background-image: url(assets/images/bg-texture.png);
+}
+
+/* General Styles */
+.container {
+  width: v.$container-width-lg;
+  margin: 0 auto;
+
+  @include m.laptop {
+    width: v.$container-width-md;
+  }
+
+  @include m.small {
+    width: v.$container-width-sm;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+section {
+  margin-top: 12.8rem;
+
+  @include m.laptop {
+    margin-top: 9.6rem;
+  }
+}
+
+section > h2,
+section > h5 {
+  text-align: center;
+  color: v.$color-light;
+}
+
+section > h2 {
+  color: v.$color-primary;
+  margin-bottom: 4.8rem;
+
+  @include m.small {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.text_light {
+  color: v.$color-light;
+}
+
+a {
+  color: v.$color-primary;
+  transition: all .4s ease;
+
+  &:hover {
+    color: v.$color-white;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.swiper {
+  padding-bottom: 5rem;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: v.$color-primary;
+}

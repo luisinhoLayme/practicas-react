@@ -1,0 +1,25 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.about-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 0 1.5rem;
+
+  &__paragraph {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+    color: v.$text-black-600;
+
+    &--span {
+      font-weight: 600;
+    }
+  }
+
+  &__link {
+    @include m.button(transparent, c.$skin-color);
+    margin: 3rem 2rem 0 0;
+  }
+}

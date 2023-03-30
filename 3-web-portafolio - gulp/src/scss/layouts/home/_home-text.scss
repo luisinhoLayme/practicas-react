@@ -1,0 +1,30 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.home-text {
+
+  &__paragraph {
+    color: v.$text-black-300;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    margin: 0;
+  }
+
+  &__h2 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: v.$text-black-900;
+  }
+
+  &__h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: v.$text-black-700;
+    text-transform: capitalize;
+  }
+
+  &__link {
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,37 @@
+@use '../../scss/variables' as v;
+@use '../../scss/mixins' as m;
+
+nav {
+  background-color: rgba(0, 0, 0, .3);
+  width: max-content;
+  display: block;
+  padding: 1.4rem 2.9rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3.2rem;
+  display: flex;
+  gap: 1.4rem;
+  border-radius: 4.8rem;
+  backdrop-filter: blur(15px);
+
+  .link {
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    color: v.$color-light;
+    font-size: 1.7rem;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .3);
+    }
+
+    &.active {
+      background-color: v.$color-primary;
+      color: v.$color-bg;
+    }
+  }
+}
+

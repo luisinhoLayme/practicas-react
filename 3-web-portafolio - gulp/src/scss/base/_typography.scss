@@ -1,0 +1,44 @@
+@use 'abstracts/variables' as v;
+@use 'themes/colors' as c;
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+}
+h2 {
+}
+h3 {
+}
+
+[class$="title"] {
+  padding: 0 1.5rem;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+[class$="heading"] {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: v.$text-black-900;
+  text-transform: uppercase;
+  margin: 0;
+
+  &:before {
+    content: attr(data-heading);
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: c.$skin-color;
+  }
+}
+a {
+  text-decoration: none;
+}

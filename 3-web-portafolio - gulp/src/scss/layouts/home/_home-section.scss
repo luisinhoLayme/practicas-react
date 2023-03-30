@@ -1,0 +1,19 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.home-section {
+  position: relative;
+
+  &__full-screen {
+    padding: 5rem 0;
+    min-height: 100vh;
+    align-items: center;
+  }
+}
+
+.home-text, 
+.home-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 1.5rem;
+}

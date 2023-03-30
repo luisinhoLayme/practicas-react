@@ -1,0 +1,15 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.header {
+  padding: 2rem 1.5rem;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  &__row {
+    justify-content: space-between;
+  }
+}

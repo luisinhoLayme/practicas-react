@@ -1,0 +1,47 @@
+include ../config/config
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap' rel='stylesheet')
+    link(rel="stylesheet", href="css/all.min.css", media="all")
+    link(rel="stylesheet", href="css/app.css", media="all")
+    title portfolio website
+  body
+    header.header
+      .header__container
+        .header__row
+          .logo
+            a(href="index.html").logo__enlace L
+          .hamburger-btn
+            span.hamburger-btn__span
+    section.menu
+      block nav-menu
+    .fade-out-effect
+    section.home-section.section.section--active#home
+      block home-section
+    section.about-section.section#about
+      block about-section
+    section.service-section.section#services
+      block service-section
+    section.portfolio-section.section#portfolio
+      block portfolio-section
+    section.testimonial-section.section#testimonial
+      block testimonial-section
+    section.contact-section.section#contact
+      block contact-section
+    .pp#portfolio-popup
+      block portfolio-popup
+    .style-switcher
+      .style-toggler
+        i.fas.fa-cog.fa-spin
+      .day-night
+        i.fas.fa-moon
+      h4.style-switcher__h4 Theme Solor
+
+    script(src="js/scripts-min.js")
+
+  //- You are in video 7, at minute 29:50 xd nab :)
+

@@ -1,0 +1,27 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.testi-slider-nav {
+  margin-top: 3rem;
+  text-align: center;
+
+  &__prev,
+  &__next {
+    box-shadow: v.$outer-shadow;
+    @include m.hover-in-shadow;
+    border-radius: 50%;
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    color: c.$skin-color;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 .4rem;
+    transition: all .3s ease;
+  }
+
+  &__i {
+    line-height: 4rem;
+  }
+}

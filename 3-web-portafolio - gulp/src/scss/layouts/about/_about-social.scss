@@ -1,0 +1,25 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.about-social {
+  margin-top: 2rem;
+  text-align: center;
+
+  &__link {
+    color: v.$text-black-600;
+    display: inline-block;
+    line-height: 4.3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 .4rem;
+    height: 4rem;
+    width: 4rem;
+    padding: 0;
+    transition: color .3s ease;
+
+    &:hover {
+      color: c.$skin-color;
+    }
+  }
+}

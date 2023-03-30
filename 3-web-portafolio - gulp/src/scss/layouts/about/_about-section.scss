@@ -1,0 +1,30 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.about-section {
+  padding: 8rem 0 0;
+  min-height: 100vh;
+}
+
+.tab-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: none;
+
+  &--active {
+    display: block;
+    animation: fadeInTop .5s ease-in-out;
+
+    @keyframes fadeInTop {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+}

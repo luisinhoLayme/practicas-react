@@ -1,0 +1,8 @@
+@use 'abstracts/variables' as v;
+
+:root {
+--color-4: #2eb1ed;
+--color-5: #cc3a3b;
+}
+
+$skin-color: var(--color-4);

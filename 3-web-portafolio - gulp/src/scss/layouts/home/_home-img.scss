@@ -1,0 +1,20 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.home-img {
+
+  &__box {
+    max-width: 45rem;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: v.$inner-shadow;
+    padding: 1.5rem;
+  }
+  &__image {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: v.$outer-shadow;
+    border: 1rem solid transparent;
+  }
+}

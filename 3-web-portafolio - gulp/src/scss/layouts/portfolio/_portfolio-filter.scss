@@ -1,0 +1,33 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.portfolio-filter {
+  padding: 0 1.5rem;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  &__item {
+    display: inline-block;
+    margin: 0 .5rem 1rem;
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: v.$text-black-600;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    transition: opacity .3s ease;
+
+    &:hover:not(.portfolio-filter__item--active) {
+      opacity: .6;
+    }
+
+    &--active {
+      color: c.$skin-color;
+      box-shadow: v.$outer-shadow;
+    }
+  }
+}

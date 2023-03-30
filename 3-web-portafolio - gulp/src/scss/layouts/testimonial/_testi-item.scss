@@ -1,0 +1,45 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+
+.testi-item {
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+
+  &__i {
+    position: absolute;
+    font-size: 3rem;
+    color: v.$text-black-600;
+    opacity: .1;
+
+    &--left {
+      left: .5rem;
+      top: .5rem;
+    }
+
+    &--right {
+      right: .5rem;
+      bottom: .5rem;
+    }
+  }
+
+  &__paragraph {
+    line-height: 2.6rem;
+    color: v.$text-black-600;
+    margin: 0 0 3rem;
+  }
+
+  &__img {
+    max-width: 7rem;
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__span {
+    display: block;
+    margin: 1rem 0 0;
+    font-weight: 600;
+    color: v.$text-black-700;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,43 @@
+.contact-section__container
+  .contact-section__row
+    .contact-section__title
+      h2.contact-section__heading(data-heading="contact") Get In Touch
+  .contact-section__row
+    //- contact item start
+    .contact-item
+      .contact-item__inner
+        i.fas.fa-phone.contact-item__i
+        span.contact-item__span Phone
+        p.contact-item__paragraph 000 934 493
+    //- contact item end
+    //- contact item start
+    .contact-item
+      .contact-item__inner
+        i.fas.fa-envelope.contact-item__i
+        span.contact-item__span Email
+        p.contact-item__paragraph info@domina.com
+    //- contact item end
+    //- contact item start
+    .contact-item
+      .contact-item__inner
+        i.fas.fa-map-marker-alt.contact-item__i
+        span.contact-item__span Address
+        p.contact-item__paragraph b/33 Chuquizaca Sucre, Yotala - 2828
+    //- contact item end
+  .contact-section__row
+    .contact-form
+      form.contact-form__form
+        .contact-form__row
+          .w-50
+            .w-50__input-group
+              input(type="text" placeholder="Name").w-50__input-control
+            .w-50__input-group
+              input(type="email" placeholder="Email").w-50__input-control
+            .w-50__input-group
+              input(type="text" placeholder="Subject").w-50__input-control
+          .w-50
+            .w-50__input-group
+              textarea(placeholder="Message").w-50__input-control.w-50__input-control--textarea
+        .contact-form__row
+          .submit-btn
+            button(type="submit").submit-btn__link Send Message

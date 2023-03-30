@@ -1,0 +1,163 @@
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
+@use 'themes/colors' as c;
+
+.pp {
+  background-color: v.$bg-black-50;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease,
+              opacity .3s ease-in-out;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    background-color: v.$bg-opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__loader {
+    height: 4rem;
+    width: 4rem;
+    border: .3rem solid c.$skin-color;
+    border-radius: 50%;
+    border-right: .3rem solid transparent;
+    animation: spin 2s linear infinite;
+  }
+
+  &__separator {
+    height: .1rem;
+    width: 100%;
+    display: block;
+    background-color: v.$bg-black-100;
+  }
+
+  &__main {
+    min-height: 100vh;
+    max-width: 1350px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner {
+    padding: 7rem 0 5rem;
+    position: relative;
+  }
+
+  &__btn {
+    box-shadow: v.$outer-shadow;
+    @include m.hover-in-shadow;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: c.$skin-color;
+    cursor: pointer;
+    position: absolute;
+    padding: 0 1.5rem;
+    left: 0;
+    top: 1.5rem;
+    height: 4rem;
+    line-height: 4rem;
+    transition: all .3s ease;
+
+    &--i {
+      margin-left: .4rem;
+    }
+  }
+
+  &__close {
+    box-shadow: v.$outer-shadow;
+    @include m.hover-in-shadow;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    height: 4rem;
+    width: 4rem;
+    top: 1.5rem;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 3.5rem;
+    color: v.$text-black-600;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: .5rem;
+    box-shadow: v.$outer-shadow;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+  }
+
+  &__counter {
+    position: absolute;
+    right: 0;
+    height: 4rem;
+    line-height: 4rem;
+    bottom: .5rem;
+    color: v.$text-black-600;
+  }
+
+  &__prev,
+  &__next {
+    position: fixed;
+    top: 50%;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1010;
+    color: v.$text-black-900;
+    transition: opacity .3s ease;
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--i {
+      line-height: 4rem;
+    }
+  }
+  &__prev {
+    left: 1.5rem;
+
+    &--i {
+      transform: rotate(180deg);
+    }
+  }
+  &__next {
+    right: 1.5rem;
+  }
+}

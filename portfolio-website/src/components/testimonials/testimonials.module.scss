@@ -1,0 +1,46 @@
+@use '../../scss/variables' as v;
+@use '../../scss/mixins' as m;
+
+.testimonials {
+  width: 40%;
+  margin: 0 auto;
+
+  @include m.laptop {
+    width: 60%;
+  }
+
+  @include m.small {
+    width: v.$container-width-sm;
+  }
+}
+
+.testimonial {
+  background-color: v.$color-bg-variant;
+  text-align: center;
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  user-select: none;
+  cursor: grab;
+  padding-bottom: 5rem;
+}
+
+.client {
+  width: 6.4rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1.6rem;
+  border: .7rem solid v.$color-primary-variant;
+}
+
+.client_review {
+  color: v.$color-light;
+  font-weight: 300;
+  display: block;
+  width: 80%;
+  margin: 1.4rem auto 0;
+
+  @include m.small {
+    width: v.$container-width-sm;
+  }
+}
